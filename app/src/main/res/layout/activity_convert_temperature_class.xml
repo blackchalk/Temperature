@@ -23,20 +23,43 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
+        android:text="degree celcius"
         android:id="@+id/outputVal"
-        android:layout_marginTop="54dp"
-        android:layout_below="@+id/inputVal"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
+        android:text="Calculate"
         android:id="@+id/button"
         android:layout_marginTop="47dp"
         android:layout_below="@+id/outputVal"
         android:layout_centerHorizontal="true"
         android:onClick="showCelcius" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FAHRENHEIGT"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="41dp"
+        android:textSize="32dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result:"
+        android:id="@+id/textView2"
+        android:layout_alignTop="@+id/outputVal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="32dp" />
 
 </RelativeLayout>
