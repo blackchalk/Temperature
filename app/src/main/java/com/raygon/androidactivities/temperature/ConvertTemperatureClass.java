@@ -1,17 +1,36 @@
 package com.raygon.androidactivities.temperature;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 
-public class ConvertTemperatureClass extends ActionBarActivity {
+public class ConvertTemperatureClass extends Activity {
+
+    private EditText inputVal=null;
+    private TextView outputVal=null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_convert_temperature_class);
+        inputVal=(EditText) findViewById(R.id.inputVal);
+        outputVal=(TextView)findViewById(R.id.outputVal);
+    }
+    public float convertIt(){
+        Float f;
+        f=Float.parseFloat(inputVal.getText().toString());
+        return((f-32)*5/9);
+
+    }
+    public void showCelcius(View v){
+        Float c;
+        c=convertIt();
+        outputVal.setText(c+" degree C");
     }
 
 
